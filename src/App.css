@@ -1,38 +1,76 @@
-.App {
-  text-align: center;
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.section {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: var(--max-width);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media screen and (min-width: 992px) {
+  .section {
+    width: 95vw;
   }
 }
 
-.App-header {
-  background-color: #282c34;
+body {
+  background-color: #4b145b;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.accordion-container {
+  border-radius: 0.5em;
+  margin: 5rem auto;
+  padding: 2.5rem 2rem;
+  width: 90vw;
+  max-width: 70vw;
+  gap: 1rem 2rem;
+  background-color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.accordion-container h1 {
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 992px) {
+  .accordion-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    line-height: 1.2;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.accordion {
+  box-shadow: 0 0 10px 4px rgb(228, 228, 228);
+  border-radius: 0.2em;
+  padding: 18px;
+  margin: 20px 0;
+}
+
+.accordion-button {
+  background-color: rgb(233, 233, 233);
+  color: rgb(145, 0, 0);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+h1 {
+  line-height: 0;
 }
